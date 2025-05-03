@@ -70,7 +70,7 @@
     - Register a new user and start managing your tasks.
 
 ## Additional Notes
-- **Database Initialization**: The [`setupDB`](controller/init.js) function in [`controller/init.js`](controller/init.js) ensures that the required database and tables are created if they do not already exist.
+- **Database Initialization**: The [`setupDB`](controller/init.js#L38-L46) function in [`controller/init.js`](controller/init.js) ensures that the required database and tables are created if they do not already exist.
 - **Static Files**: CSS and JavaScript files are served from the [`public`](public) directory.
 - **Future Enhancements**:
   - Add task completion functionality.
