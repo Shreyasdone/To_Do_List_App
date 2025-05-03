@@ -1,0 +1,21 @@
+<%- include('includes/header.ejs') %>
+<body>
+  <h1>Add a new task</h1>
+  <div class="d-flex align-items-center justify-content-center">
+    <div class="mx-auto w-75">
+      <form method="post" action="/tasks">
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" class="form-control" name="title" id="title" aria-describedby="task title">
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea class="form-control" name="description" id="description" rows="10" placeholder="Enter task Description"></textarea>
+        </div>
+        <!-- <button class="btn secondary-bg">Add Task</button> -->
+         <button class="btn btn-primary">Add Task</button>
+      </form>
+    </div>
+</div>
+      
+</body>

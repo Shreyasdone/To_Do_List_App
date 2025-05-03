@@ -1,0 +1,134 @@
+h1 {
+  color: #05445e;
+  text-align: center;
+}
+
+.secondary-bg {
+  background-color: #75e6da;
+}
+
+.primary-col {
+  color: #05445e;
+}
+
+.card {
+  width: 60%;
+  height: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+}
+
+.form {
+  width: 60%;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0 1rem 1rem 0;
+  border: none;
+}
+
+.welcome {
+  background: linear-gradient(#189ab4, #fff);
+  border-radius: 1rem 0 0 1rem;
+  box-shadow: 1rem rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.6);
+  display: flex;
+  margin: 15vh auto 0;
+}
+
+.google-icon {
+  font-size: larger;
+  margin-top: 1rem;
+  border: 2px solid black;
+  padding: 1rem;
+  color: black;
+}
+
+.google-icon:hover {
+  background-color: rgb(40, 38, 38);
+  color: white;
+  transition: 100ms ease-in-out;
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.login-welcome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  transform: translateX(0);
+  animation: slideRight 1s ease-out forwards;
+  background: linear-gradient(#189ab4, #fff);
+  border-radius: 1rem 0 0 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.register-welcome {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  transform: translateX(0);
+  animation: slideLeft 1s ease-out forwards;
+  background: linear-gradient(#189ab4, #fff);
+  border-radius: 0 1rem 1rem 0;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 10;
+}
+
+.sudo-div {
+  background-color: white;
+  border: none;
+}
+
+.login-form {
+  width: 50%;
+}
+
+.user-welcome {
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* margin-right: 0.5rem; */
+  padding: 0.5rem;
+  box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.2);
+}

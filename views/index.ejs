@@ -1,0 +1,32 @@
+<%- include('includes/header.ejs') %>
+<body>
+    <%= console.log(user) %>
+    <h1>To Do List</h1>
+    <!-- <div class="card"> -->
+        <h5 class="float-end user-welcome"><i class="bi bi-person-circle m-2"></i>Welcome, <%= user.first_name %> <%= user.last_name %></h5>
+    <!-- </div> -->
+    <div class="d-flex flex-column align-items-center list">
+        <div class="d-flex w-75 justify-content-end alight-items-center m-2">
+            <a href="/tasks/new"><button class="btn btn-outline-dark" id="add-task">Add a Task<span class="m-2 fa fa-plus"></span></button></a>
+        </div>
+        <ol class="list-group list-group-numbered w-75">
+            <% for (task of tasks) { %>
+                <li class="list-group-item d-flex flex-row justify-content-between align-items-start primary-col">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold"> <%= task.title %></div>
+                    <div><%= task.description %></div>
+                </div>
+                <div class="buttons d-flex align-self-center">
+                    <a href="/tasks/edit/<%=task._id%>"><button class="btn btn-secondary m-2">Edit</button></a>
+                    <a href="/tasks/<%=task._id%>"><button class="btn btn-dark m-2">View</button></a>
+                    <button class="btn btn-success m-2">Complete</button>
+                    <form method="post" action="/tasks/<%=task._id%>?_method=DELETE">
+                        <button class="btn btn-danger m-2">Delete</button>
+                    </form>
+                </div>
+                </li>
+            <% } %>
+        </ol>
+    </div>
+</body>
+<script src="/script.js"></script>
